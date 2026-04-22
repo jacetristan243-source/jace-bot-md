@@ -1,88 +1,194 @@
+<div align="center">
+
 # ⚡ JACE BOT MD v2.0.0
 
-Bot WhatsApp multi-fonctionnalités basé sur **Baileys** — développé par **Jace Miller Stark**.
+<img src="./assets/logo.png" width="220"/>
+
+Bot WhatsApp multi-fonctionnalités basé sur **Baileys**  
+Développé par **Jace Miller Stark**
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/jacetristan243-source/jace-bot-md?style=for-the-badge" />
+  <img src="https://img.shields.io/github/forks/jacetristan243-source/jace-bot-md?style=for-the-badge" />
+  <img src="https://img.shields.io/github/license/jacetristan243-source/jace-bot-md?style=for-the-badge" />
+  <img src="https://img.shields.io/github/repo-size/jacetristan243-source/jace-bot-md?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <a href="https://t.me/QueenNovaBot">
+    <img src="https://img.shields.io/badge/Telegram-Bot-blue?style=for-the-badge&logo=telegram" />
+  </a>
+  <a href="https://wa.me/241065491629">
+    <img src="https://img.shields.io/badge/WhatsApp-Contact-green?style=for-the-badge&logo=whatsapp" />
+  </a>
+</p>
+
+</div>
 
 ---
 
-## 🚀 Déploiement sur FreeGameHost
+## ✨ Fonctionnalités
 
-### 1. Configurer le dépôt GitHub dans le panel
+✅ Pairing WhatsApp automatique  
+✅ Support Telegram  
+✅ IA intégrée  
+✅ Voice Changer  
+✅ Système économie  
+✅ Gestion avancée des groupes  
+✅ Anti-spam / Anti-link / Anti-tag  
 
-Dans votre panel FreeGameHost → onglet **Startup** → champ **GIT REPO ADDRESS** :
+---
+
+## 🚀 Déploiement rapide
+
+<div align="center">
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com)
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app)
+
+</div>
+
+---
+
+## 📱 Connexion WhatsApp
+
+### Via Telegram
+
+Cliquez ici :
+
+👉 [Ouvrir QueenNovaBot](https://t.me/QueenNovaBot)
+
+Puis envoyez :
+
+```bash
+/pair votre_numero
 ```
+
+Exemple :
+
+```bash
+/pair 241XXXXXXXX
+```
+
+---
+
+## 🌐 Déploiement FreeGameHost
+
+Dans **Startup → GIT REPO ADDRESS**
+
+```bash
 https://github.com/jacetristan243-source/jace-bot-md.git
 ```
 
-### 2. Démarrer le serveur
-
 Le panel exécutera automatiquement :
-- `git pull` pour récupérer le code
-- `npm install` pour installer les dépendances
-- `node index.js` pour lancer le bot
 
-### 3. Connexion WhatsApp (Pairing Code)
-
-Via **Telegram** : envoyez `/pair [votre_numéro]` à votre bot Telegram.
-
-Via le **site Vercel** : rendez-vous sur votre URL de déploiement et entrez votre numéro directement.
+```bash
+git pull
+npm install
+node index.js
+```
 
 ---
 
 ## ⚙️ Configuration
 
-Modifiez `config.js` avant de déployer :
+Modifiez `config.js`
 
-| Paramètre | Description |
-|-----------|-------------|
-| `global.owner` | Votre numéro WhatsApp (sans +) |
-| `global.api.gemini` | Votre clé API Google Gemini |
-| `global.api.tgToken` | Token de votre bot Telegram |
-| `global.adminTelegramIds` | Votre ID Telegram |
-| `global.mode` | `"public"` ou `"private"` |
-
----
-
-## 📋 Commandes disponibles
-
-**Administration** — `.kick`, `.promote`, `.demote`, `.kickall`, `.group open/close`, `.hidetag`, `.tagall`, `.broadcast`
-
-**Téléchargement** — `.song [titre]`, `.play [titre]`, `.tiktok [lien]`, `.sticker`
-
-**IA** — `.gemini [question]`, `.claude [question]`
-
-**Voice Changer** — `.bass`, `.robot`, `.reverse`, `.nightcore`, `.fast`, `.slow`
-
-**Social & Jeux** — `.profil`, `.rank`, `.top`, `.daily`, `.balance`, `.couple`
-
-**Utilitaires** — `.menu`, `.ping`, `.alive`, `.runtime`, `.mode`
-
-**Protection** — `.antilink on/off`, `.antispam on/off`, `.antitag on/off`
+| Variable | Description |
+|---------|-------------|
+| `global.owner` | Numéro propriétaire |
+| `global.api.gemini` | Clé API Gemini |
+| `global.api.tgToken` | Token Telegram |
+| `global.adminTelegramIds` | ID admin Telegram |
+| `global.mode` | public / private |
 
 ---
 
-## 🗂️ Structure du projet
+## 📋 Commandes principales
 
+### 👑 Administration
+```bash
+.kick
+.promote
+.demote
+.kickall
+.group open
+.group close
+.hidetag
+.tagall
+.broadcast
 ```
+
+### 🤖 IA
+```bash
+.gemini
+.claude
+```
+
+### 🎵 Média
+```bash
+.song
+.play
+.tiktok
+.sticker
+```
+
+### 🎙️ Voice Effects
+```bash
+.bass
+.robot
+.reverse
+.nightcore
+.fast
+.slow
+```
+
+### 🔐 Protection
+```bash
+.antilink
+.antispam
+.antitag
+```
+
+---
+
+## 🗂️ Structure
+
+```bash
 jace-bot-md/
-├── index.js          ← Point d'entrée principal
-├── handler.js        ← Gestionnaire de commandes
-├── command.js        ← Registre des commandes
-├── config.js         ← Configuration globale
-├── package.json      ← Dépendances Node.js
+├── index.js
+├── handler.js
+├── command.js
+├── config.js
+├── assets/
+│   └── logo.png
 ├── lib/
-│   ├── claude.js     ← Module IA (Gemini)
-│   ├── voice.js      ← Module Voice Changer
-│   └── groupe.js     ← Module événements groupe
 ├── database/
-│   ├── antilink.json
-│   ├── antispam.json
-│   └── antitag.json
-├── temp/             ← Fichiers audio temporaires
-├── users.json        ← Profils utilisateurs
-├── levels.json       ← Système de niveaux
-└── economy.json      ← Système d'économie
+└── package.json
 ```
 
 ---
 
-**JACE BOT MD v2.0.0** — © Jace Miller Stark
+## 📞 Contact développeur
+
+<div align="center">
+
+[![WhatsApp](https://img.shields.io/badge/Contact-WhatsApp-green?style=for-the-badge&logo=whatsapp)](https://wa.me/241065491629)
+
+</div>
+
+---
+
+<div align="center">
+
+### ❤️ Support du projet
+
+Si ce projet vous plaît, laissez une ⭐ sur GitHub.
+
+**JACE BOT MD v2.0.0**  
+© Jace Miller Stark
+
+</div>
